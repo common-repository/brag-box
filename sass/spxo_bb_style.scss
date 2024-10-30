@@ -1,0 +1,397 @@
+$red: #9D0101;
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/assets/OpenSans-Light.ttf');
+}
+
+/*
+* ------------------------------------------
+* *-----------------------------
+*  Front End Module
+* *-----------------------------
+* ------------------------------------------
+*/
+
+.Spxo-Bb-Container {
+	background: $red;
+	padding: 25px 20px;
+}
+
+.Spxo-Bb {
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 25px;
+	::-webkit-input-placeholder {
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	:-ms-input-placeholder {  
+		font-family: 'Open Sans', sans-serif;
+	}
+}
+
+.Spxo-Bb-Module-Title {
+	text-align: center;
+	margin-top: 0;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 1.75em;
+}
+
+.Spxo-Bb-Wrapper {
+	position: relative;
+}
+
+.Spxo-Bb-Brag-Info {
+	font-family: 'Open Sans', sans-serif;
+	min-height: 220px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-align: center;
+	font-weight: 300;
+
+	&__Container {
+		margin: 0 auto;
+		position: relative;
+	}
+
+	p {
+		text-align: center;
+		display: block;
+		width: 100%;
+		color: white;
+		word-wrap: letter;
+	}
+
+	&__Testimonial {
+		font-size: 16px;
+		margin-bottom: 15px;
+		color: #555;
+		&:before {
+			content: '"';
+		}
+		&:after {
+			content:'"';	
+		}
+	}
+
+	&__Bragged-About {
+		margin-bottom: 0;
+	}
+
+	&__Bragger {
+		color: #888;
+	}
+
+	&__Delete-Button {
+		position: absolute;
+		top: -30px;
+		right: 0px;
+		cursor: pointer;
+		width: 30px;
+		height: 30px;
+		padding-top: 3px;
+		color: white;
+	}
+}
+
+.Spxo-Bb-Input {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+
+.Spxo-Bb-Fa-Icon {
+	min-width: 14px;	
+}
+
+.Spxo-Bb-Up-and-Down-Arrows {
+	display: flex;
+	justify-content: center;
+	margin-top: 12px;
+	margin-bottom: 20px;
+	&__Down, &__Up {
+		margin: 0 3px;
+		background: darken($red, 10%);
+		color: white;
+		display: inline-flex;
+		align-items: center;
+		width: 30px;
+		height: 30px;
+		transition: .15s ease-out;
+		cursor: pointer;
+
+		&:hover, &:focus {
+			background: lighten($red, 10%);
+		}
+
+		i {
+			margin: 0 auto;
+		}
+	}
+}
+
+.Spxo-Bb-Submit {
+	text-align: center;
+	.Spxo-Bb-Submit__Button {
+		background: none;
+		color: white;
+		border: 1px solid white;
+		margin-top: 8px;
+		padding: 12px 25px;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 300;
+		text-transform: none;
+		transition: .15s ease-out;
+		border-radius: 0;
+
+		&:hover {
+			background: lighten($red, 10%);
+		}
+		&:focus {
+			background: lighten($red, 10%);
+			outline: none;
+		}
+	}
+}
+
+/*
+* *-----------------------------
+*  Front End Animations
+* *-----------------------------
+*/
+
+.Spxo-Bb-Fade-transition {
+	transition: .45s ease;
+}
+
+.Spxo-Bb-Fade-enter {
+	opacity: 0;
+}
+
+.Spxo-Bb-Fade-leave {
+	display: none;
+}
+
+
+
+/*
+* ------------------------------------------
+* *-----------------------------
+*  Admin Interface
+* *-----------------------------
+* ------------------------------------------
+*/
+
+
+.Spxo-Bb-Admin-Interface {
+	a {
+		cursor: pointer;
+	}
+
+	ul.subsubsub {
+		width: 100%;
+		li.all {
+		    margin-top: 12px;
+		    padding-left: 2px;
+		}
+	}
+}
+
+.Spxo-Bb-Admin-Menu--Active {
+	font-weight: bold;
+	color: black;
+	&:hover {
+		color: black;	
+	}
+}
+
+.Spxo-Bb-Search {
+	float: right;
+}
+
+
+/*
+* *-----------------------------
+*  Back End Animations
+* *-----------------------------
+*/
+
+.Spxo-Bb-Staggered-transition {
+    transition: all .15s ease;
+    overflow: hidden;
+    margin: 0;
+    height: 20px;
+}
+.Spxo-Bb-Staggered-enter, .Spxo-Bb-Staggered-leave {
+    opacity: 0;
+    height: 0;
+}
+
+
+/*
+* ------------------------------------------
+* *-----------------------------
+* Bootstrap Styles
+* *-----------------------------
+* ------------------------------------------
+*/
+
+.Spxo-Text-Danger {
+  color: #a94442;
+  &:hover {
+  	color: lighten(#a94442, 15%);	
+  }
+}
+
+.Spxo-Form-Group {
+  margin-bottom: 10px;
+}
+
+.Spxo-Sr-Only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.Spxo-Form-Control {
+  display: block;
+  width: 100%;
+  height: 38px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.Spxo-Form-Control:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.Spxo-Form-Control::-moz-placeholder {
+  color: #999999;
+  opacity: 1;
+}
+.Spxo-Form-Control:-ms-input-placeholder {
+  color: #999999;
+}
+.Spxo-Form-Control::-webkit-input-placeholder {
+  color: #999999;
+}
+.Spxo-Form-Control::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+
+.Spxo-Form-Group {
+	.input-group {
+	  position: relative;
+	  display: table;
+	  border-collapse: separate;
+	}
+	.input-group[class*="col-"] {
+	  float: none;
+	  padding-left: 0;
+	  padding-right: 0;
+	}
+	.input-group .form-control {
+	  position: relative;
+	  z-index: 2;
+	  float: left;
+	  width: 100%;
+	  margin-bottom: 0;
+	}
+	.input-group .form-control:focus {
+	  z-index: 3;
+	}
+
+	.input-group-addon,
+	.input-group-btn,
+	.input-group .form-control {
+	  display: table-cell;
+	}
+
+	.input-group-addon:not(:first-child):not(:last-child),
+	.input-group-btn:not(:first-child):not(:last-child),
+	.input-group .form-control:not(:first-child):not(:last-child) {
+	  border-radius: 0;
+	}
+	.input-group-addon,
+	.input-group-btn {
+	  width: 1%;
+	  white-space: nowrap;
+	  vertical-align: middle;
+	}
+
+	.input-group-addon,
+	.input-group-btn {
+	  width: 1%;
+	  white-space: nowrap;
+	  vertical-align: middle;
+	}
+
+	.input-group-addon {
+	  padding: 6px 12px;
+	  font-size: 14px;
+	  font-weight: normal;
+	  line-height: 1;
+	  color: #555555;
+	  text-align: center;
+	  background-color: #eeeeee;
+	  border: 1px solid #cccccc;
+	}
+
+	.input-group-addon:first-child {
+	  border-right: 0;
+	}
+	.input-group-addon:last-child {
+	  border-left: 0;
+	}
+}
+
+.Spxo-Alert {
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+.Spxo-Alert-Warning {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b;
+}
+
+.Spxo-Alert-Danger {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+

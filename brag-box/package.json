@@ -1,0 +1,27 @@
+{
+  "name": "xoo-boilerplate",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.5.2",
+    "babel-plugin-transform-runtime": "^6.5.2",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-runtime": "^5.8.35",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-filesize": "*",
+    "gulp-livereload": "*",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-uglify": "*",
+    "gulp-watch": "*",
+    "vue-hot-reload-api": "^1.3.2",
+    "vueify": "^8.3.5",
+    "vueify-insert-css": "^1.0.0"
+  }
+}
